@@ -1,0 +1,179 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.cabeza{
+    background-color: rgb(244, 174, 45);
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    margin: 0;
+    padding-bottom: 0;
+}
+
+.logo{ 
+  width: 100px;
+}
+
+.busqueda{
+    width: 400px; height: 25px;
+display: flex;
+background-color: rgb(255, 208, 119);
+
+transition: 2s;
+}
+
+input, button{
+    border: none;
+    outline: none;
+}
+
+.busqueda:hover{
+transform: scaleX(300px);
+
+}
+
+.limitador{
+width: 80vw;
+}
+
+#busca {
+    background: none;
+    text-decoration: none;
+    align-self: flex-end;
+    width: 100px; height: 50px;
+}
+
+.registrarse{
+  
+    text-decoration: none;
+    
+}
+
+.xd:hover {
+    color: red;
+    
+}
+
+.limit{
+    height: 250px;
+    display: flex;
+    overflow:hidden;
+    scroll-snap-type: X mandatory;
+    margin-top: 50px;
+    animation: Mover; 
+}
+@keyframes{
+    0%    {transform:translate(200px:)}              
+    25%   {transform:translate()}
+    50%   {transform:translate()}
+    75%   {transform:translate()}
+    100%  {transform:translate()} 
+}
+
+#imagen1, #imagen2, #imagen3, #imagen4{
+    min-width: 800px;
+    width: 800px;
+    height: 100%;
+    scroll-snap-align: start;
+    
+}
+
+#imagen1{
+background-image: url(imagenes/Ejemplo\ 1.png);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+}
+
+#imagen2{
+background-image: url(imagenes/Ejemplo\ 2.png);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+}
+
+#imagen3{
+background-image: url(imagenes/Ejemplo\ 3.png);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+}
+
+#imagen4{
+background-image: url(imagenes/Ejemplo\ 4.png);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+}
+
+.points{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+  text-decoration: none;
+  list-style: circle;
+    
+}
+
+.puntos{
+    border-radius: 50%;
+    background-color: rgb(249, 220, 151);
+    color: rgb(249, 220, 151);;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    cursor:pointer;
+}
+ 
+ 
+
+
+body {
+    background-image: url(imagenes/Kick\ deal\ fondo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+section{
+    width:80vw;
+    margin: auto;
+   
+}
+
+h1{
+    font-size: 25px;
+}
+
+.trab{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(223, 230, 89);
+    width: 100%;
+    height: 90px;
+    margin: left 0;
+}
+
+.formu{
+    background-image: ;
+    color: black;
+    width: 100px;
+    height: 100px;
+    transition: 2s;
+    align-self:center ;
+}
+
+.formu:hover{
+    width: 125px;
+    height: 125px;
+    background-color: orange;
+    color: whitesmoke;
+    
+}
