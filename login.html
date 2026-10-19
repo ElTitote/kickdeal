@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión - Kickdeal</title>
+  <link rel="stylesheet" href="Login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  </head>
+
+<body>
+
+  <header class="header">
+  <div class="limitador header-container">
+    <a href="index.html" class="logo-link">
+      <img class="logo" src="no-bg.png" alt="Kickdeal Logo">
+    </a>
+    <a class="btn-inicio" href="index.html">
+      <i class="fa-solid fa-house"></i>
+      <span>Volver al Inicio</span>
+    </a>
+  </div>
+</header>
+
+
+  <main class="limitador login-section">
+    <div class="login-card">
+      <div class="login-header">
+        <h2>¡Hola de nuevo!</h2>
+        <p>Ingresa tus datos para acceder a Kickdeal</p>
+      </div>
+
+      <div class="login-body">
+        <form action="#" method="POST">
+          <div class="input-group">
+            <label for="usuario">Correo o Usuario</label>
+            <div class="input-field">
+              <i class="fa-solid fa-envelope"></i>
+              <input type="text" id="usuario" name="usuario" placeholder="ejemplo@kickdeal.com" required>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="password">Contraseña</label>
+            <div class="input-field">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="password" name="password" placeholder="••••••••" required>
+            </div>
+          </div>
+
+          <div class="form-extra">
+            <label>
+              <input type="checkbox" name="remember"> Recordarme
+            </label>
+            <a href="#" class="forgot-link">¿Olvidaste tu contraseña?</a>
+          </div>
+
+          <button type="submit" class="btn-submit-login">
+            Iniciar Sesión <i class="fa-solid fa-arrow-right-to-bracket" style="margin-left: 6px;"></i>
+          </button>
+        </form>
+
+        <div class="login-footer">
+          <p>¿Aún no tienes una cuenta? <a href="#">Regístrate aquí</a></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+ 
+  <footer class="footer">
+    <div class="copyright">
+      <p>&copy; 2026 Kickdeal. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

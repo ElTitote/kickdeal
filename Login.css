@@ -1,0 +1,479 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+:root {
+  --primary-color: #ff4500;   
+  --dark-bg: #1a1a1a;         
+  --light-bg: #f4f6f8;       
+  --card-bg: #ffffff;        
+  --text-dark: #222222;   
+  --text-muted: #666666;      
+  --border-color: #e1e1e1; 
+}
+
+body {
+  background-color: var(--light-bg);
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Limitador de ancho global */
+.limitador {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==========================================
+   2. ENCABEZADO (HEADER & NAVBAR)
+   ========================================== */
+.header {
+  background-color: var(--dark-bg);
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Ajuste del Logo para evitar agrandamientos desproporcionados */
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Buscador principal */
+.busqueda {
+  display: flex;
+  flex: 1;
+  max-width: 480px;
+  position: relative;
+}
+
+.busqueda input {
+  width: 100%;
+  padding: 10px 45px 10px 16px;
+  border-radius: 25px;
+  border: 1px solid #333333;
+  background-color: #2b2b2b;
+  color: #ffffff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.busqueda input:focus {
+  border-color: var(--primary-color);
+  background-color: #333333;
+}
+
+.busqueda button {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.busqueda button:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Botones de navegación del Header */
+.registrarse {
+  display: flex;
+  align-items: center;
+}
+
+.btn-login,
+.btn-inicio {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 8px 18px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.btn-login:hover,
+.btn-inicio:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #ffffff;
+}
+
+/* ==========================================
+   3. SLIDER / CARRUSEL CON ANIMACIÓN
+   ========================================== */
+.slider-container {
+  margin: 30px 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  background-color: #000000;
+}
+
+.slider {
+  display: flex;
+  width: 400%;
+  height: 420px;
+  /* Animación continua en bucle de 16 segundos */
+  animation: carruselAnim 16s infinite ease-in-out;
+}
+
+.slide {
+  width: 25%;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Keyframes de la animación de deslizamiento */
+@keyframes carruselAnim {
+  0%, 20% { transform: translateX(0%); }
+  25%, 45% { transform: translateX(-25%); }
+  50%, 70% { transform: translateX(-50%); }
+  75%, 95% { transform: translateX(-75%); }
+  100% { transform: translateX(0%); }
+}
+
+/* Puntos de navegación manual */
+.points {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.puntos {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.puntos:hover {
+  background-color: var(--primary-color);
+  transform: scale(1.3);
+}
+
+/* ==========================================
+   4. SECCIÓN "TRABAJA CON NOSOTROS"
+   ========================================== */
+.trabaja-section {
+  margin-bottom: 40px;
+}
+
+.trab {
+  background-color: var(--card-bg);
+  padding: 40px 30px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--border-color);
+}
+
+.trab h2, .trab h1 {
+  color: var(--text-dark);
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.trab p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  margin-bottom: 24px;
+}
+
+.btn-formu {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 69, 0, 0.25);
+}
+
+.btn-formu:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 69, 0, 0.35);
+}
+
+/* ==========================================
+   5. SECCIÓN DE INICIO DE SESIÓN (LOGIN)
+   ========================================== */
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  flex: 1;
+}
+
+.login-card {
+  background-color: var(--card-bg);
+  width: 100%;
+  max-width: 420px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.login-header {
+  background: linear-gradient(135deg, var(--dark-bg) 0%, #2c2c2c 100%);
+  color: #ffffff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+.login-header h2 {
+  font-size: 1.75rem;
+  margin-bottom: 6px;
+}
+
+.login-header p {
+  font-size: 0.9rem;
+  color: #bbbbbb;
+}
+
+.login-header::after {
+  content: '';
+  display: block;
+  width: 45px;
+  height: 4px;
+  background-color: var(--primary-color);
+  margin: 12px auto 0 auto;
+  border-radius: 2px;
+}
+
+.login-body {
+  padding: 30px 25px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+  font-size: 0.9rem;
+}
+
+.input-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-field i {
+  position: absolute;
+  left: 14px;
+  color: #777777;
+  font-size: 1rem;
+}
+
+.input-field input {
+  width: 100%;
+  padding: 12px 12px 12px 42px;
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  outline: none;
+  background-color: #fafafa;
+  transition: all 0.3s ease;
+}
+
+.input-field input:focus {
+  border-color: var(--primary-color);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(255, 69, 0, 0.15);
+}
+
+.form-extra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  margin-bottom: 25px;
+}
+
+.form-extra label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  color: var(--text-muted);
+}
+
+.form-extra input[type="checkbox"] {
+  accent-color: var(--primary-color);
+}
+
+.forgot-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+.btn-submit-login {
+  width: 100%;
+  padding: 13px;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 69, 0, 0.25);
+}
+
+.btn-submit-login:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 69, 0, 0.35);
+}
+
+.login-footer {
+  text-align: center;
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.login-footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.login-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================
+   6. PIE DE PÁGINA (FOOTER Y COPYRIGHT)
+   ========================================== */
+.footer {
+  background-color: var(--dark-bg);
+  color: #ffffff;
+  margin-top: auto;
+  padding-top: 30px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.footer-brand h3 {
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.footer-brand p {
+  font-size: 0.9rem;
+  color: #aaaaaa;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social a {
+  color: #ffffff;
+  font-size: 1.2rem;
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+.copyright {
+  border-top: 1px solid #333333;
+  text-align: center;
+  padding: 16px 0;
+  font-size: 0.85rem;
+  color: #888888;
+}

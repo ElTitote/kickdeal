@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin-top: 0px;
+    background-image: linear-gradient(rgba(187, 169, 5, 0.65), rgba(240, 108, 0, 0.75));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 40px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+/*Contenedor Principal y Formulario*/
+.form-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    width: 100%;
+    padding: 30px;
+    border-radius: 12px;
+    border: 2px solid #ff6600;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+    color: #e65100;
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/*Son los grupos de formulario, todos los que tiene la clase form-group*/
+.form-group {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inline-group {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+}
+
+input[type="color"] {
+    width: 60px;
+    height: 38px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    background: none;
+}
+
+/*Este es un efecto para que cuando pasen el cursor tenga el efecto de luz*/
+input:focus, 
+select:focus, 
+textarea:focus {
+    border-color: #ff6600;
+    background-color: #ffffff;
+    outline: none;
+    box-shadow: 0 0 6px rgba(255, 102, 0, 0.35);
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* --- Secciones Internas (Fieldsets) --- */
+fieldset {
+    border: 1.5px solid #ffaa44;
+    border-radius: 8px;
+    padding: 18px;
+    margin: 25px 0;
+    background-color: rgba(255, 248, 240, 0.6);
+}
+
+legend {
+    font-weight: bold;
+    color: #d84315;
+    padding: 0 10px;
+    font-size: 1.05rem;
+}
+
+
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.checkbox-group label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+
+.buttons-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    flex: 1;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+input[type="submit"] {
+    background-color: #ff6600;
+    color: #ffffff;
+}
+
+input[type="submit"]:hover {
+    background-color: #e65100;
+}
+
+input[type="reset"] {
+    background-color: #e0e0e0;
+    color: #333333;
+}
+
+input[type="reset"]:hover {
+    background-color: #bdbdbd;
+}
+
+input[type="submit"]:active,
+input[type="reset"]:active {
+    transform: scale(0.98);
+}

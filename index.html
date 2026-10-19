@@ -4,75 +4,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="main.css">
+  <title>Kickdeal</title>
+  <link rel="stylesheet" href="main Kick.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
     integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-
 </head>
-
+ 
 <body>
-  <header class="limitador">
-    <div class="cabeza">
-      <div><img class="logo" src="imagenes/no-bg.png" alt=""></div>
-      <div class="busqueda">
-        <input class="busqueda" type="email" placeholder="Buscar">
-        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-      </div>
-      <div class="Registrarse">
-        <a class="xd" href="login.html">
+<header class="header">
+    <div class="limitador header-container">
+      <a href="index.html" class="logo-link">
+        <img class="logo" src="no-bg.png" alt="Kickdeal Logo">
+      </a>
 
-          <i class="fa-regular fa-user">Iniciar Secion</i>
+      <form class="busqueda" action="#" method="GET">
+        <input type="search" placeholder="Buscar productos, marcas y más..." required>
+        <button type="submit" aria-label="Buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
 
+      <div class="registrarse">
+        <a class="btn-login" href="login.html">
+          <i class="fa-regular fa-user"></i>
+          <span>Iniciar Sesión</span>
         </a>
       </div>
-
-
-
-
-
     </div>
   </header>
 
+
   <main class="limitador">
-
-    <section>
-      <div class="limit">
-        <figure id="imagen1"></figure>
-
-        <figure id="imagen2"></figure>
-
-        <figure id="imagen3"></figure>
-
-        <figure id="imagen4"></figure>
-
-      </div>
-      <div>
-        <div class="points">
-          <a class="puntos" href="#imagen1"></a>
-          <a class="puntos" href="#imagen2"></a>
-          <a class="puntos" href="#imagen3"></a>
-          <a class="puntos" href="#imagen4"></a>
+    <section class="slider-container">
+      <div class="slider">
+        <div class="slide" id="imagen1">
+          <img src="Publi1.png" alt="Imagen 1">
         </div>
+        <div class="slide" id="imagen2">
+          <img src="Publi2.png" alt="Imagen 2">
+        </div>
+        <div class="slide" id="imagen3">
+          <img src="Publi3.png" alt="Imagen 3">
+        </div>
+        <div class="slide" id="imagen4">
+          <img src="Publi4.png" alt="Imagen 4">
+        </div>
+      </div>
+
+      <div class="points">
+        <a class="puntos" href="#imagen1"></a>
+        <a class="puntos" href="#imagen2"></a>
+        <a class="puntos" href="#imagen3"></a>
+        <a class="puntos" href="#imagen4"></a>
       </div>
     </section>
 
+    <section class="trabaja-section">
+      <div class="trab">
+        <h2>Trabaja con nosotros</h2>
+        <p>¡Rellena este formulario y te enviaremos nuestras vacantes disponibles, para que trabajes e innoves para nosotros y los clientes!</p>
+        <a href="formulario.html" class="btn-formu">Ir al Formulario</a>
+      </div>
+    </section>
   </main>
 
-  <div>
-    <div class="trab">
-      <h1>Trabaja con nosotros</h1>
-      <p>Rellena el formulario y te enviaremos nuestra opinion!!</p>
-      <a href="formulario.html" class="formu"></a>
+  <footer class="footer">
+    <div class="limitador footer-content">
+      <div class="footer-brand">
+        <h3>Kickdeal</h3>
+        <p>Impulsaremos tus ideas al maximo</p>
+      </div>
+      
+      <div class="copyright">
+      <p>&copy; 2025 Kickdeal. Todos los derechos reservados.</p>
     </div>
-  </div>
-  <footer>
-
-
   </footer>
-</body>
 
+</body>
 </html>

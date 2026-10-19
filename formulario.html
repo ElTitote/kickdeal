@@ -1,0 +1,149 @@
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Kickdeal</title>
+    <link rel="stylesheet" href="formulario.css">
+</head>
+<body>
+
+    <main class="form-container">
+        <h1>FORMULARIO PARA VACANTE DE KICKDEAL</h1>
+        
+        <form action="" method="POST">
+            
+            
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" maxlength="30" required>
+            </div>
+
+            <div class="form-group">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido" maxlength="30" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+            </div>
+
+            <div class="form-group">
+                <label for="edad">Edad:</label> 
+                <input type="number" id="edad" name="edad" placeholder="Ingrese su edad" min="12" max="18" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Ingrese su password" minlength="6" maxlength="20" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Ingrese su email" required>
+            </div>
+
+           
+            <fieldset>
+                <legend>Acerca de ti</legend>
+
+                <div class="form-group inline-group">
+                    <label for="color_favorito">¿Cuál es tu color favorito?</label>
+                    <input type="color" id="color_favorito" name="color_favorito" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="comida_favorita">¿Cuál es tu comida favorita?</label>
+                    <input type="text" id="comida_favorita" name="comida_favorita" placeholder="Ingrese su comida favorita" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="animal_favorito">¿Cuál es tu animal favorito?</label>
+                    <input type="text" id="animal_favorito" name="animal_favorito" placeholder="Ingrese su animal favorito" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="pelicula_favorita">¿Cuál es tu película favorita?</label>
+                    <input type="text" id="pelicula_favorita" name="pelicula_favorita" placeholder="Ingrese su película favorita" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="libro_favorito">¿Cuál es tu libro favorito?</label>
+                    <input type="text" id="libro_favorito" name="libro_favorito" placeholder="Ingrese su libro favorito" required>
+                </div>
+            </fieldset>
+
+            
+            <fieldset>
+                <legend>Tus conocimientos</legend>
+
+                <div class="form-group">
+                    <label for="nivel_estudio">Nivel de estudio:</label>
+                    <select id="nivel_estudio" name="nivel_estudio" required>
+                        <option value="">Seleccione su nivel de estudio</option>
+                        <option value="primaria">Primaria</option>
+                        <option value="secundaria">Secundaria</option>
+                        <option value="secundaria_incompleta">Secundaria incompleta</option>
+                        <option value="terciario">Terciario</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Idiomas que hablas:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" id="idioma1" name="idiomas[]" value="español"> Español</label>
+                        <label><input type="checkbox" id="idioma2" name="idiomas[]" value="ingles"> Inglés</label>
+                        <label><input type="checkbox" id="idioma3" name="idiomas[]" value="frances"> Francés</label>
+                        <label><input type="checkbox" id="idioma4" name="idiomas[]" value="aleman"> Alemán</label>
+                        <label><input type="checkbox" id="idioma5" name="idiomas[]" value="italiano"> Italiano</label>
+                        <label><input type="checkbox" id="idioma6" name="idiomas[]" value="portugues"> Portugués</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="pais_origen">País de origen:</label>
+                    <select id="pais_origen" name="pais_origen" required>
+                        <option value="">Seleccione un país</option>
+                        <optgroup label="Sudamericanos">
+                            <option value="argentina">Argentina</option>
+                            <option value="bolivia">Bolivia</option>
+                            <option value="brasil">Brasil</option>
+                            <option value="chile">Chile</option>
+                            <option value="colombia">Colombia</option>
+                            <option value="ecuador">Ecuador</option>
+                            <option value="paraguay">Paraguay</option>
+                            <option value="peru">Perú</option>
+                            <option value="uruguay">Uruguay</option>
+                            <option value="venezuela">Venezuela</option>
+                        </optgroup>
+                        <optgroup label="Europeos">
+                            <option value="españa">España</option>
+                            <option value="francia">Francia</option>
+                            <option value="italia">Italia</option>
+                            <option value="alemania">Alemania</option>
+                            <option value="reino_unido">Reino Unido</option>
+                            <option value="rusia">Rusia</option>
+                            <option value="portugal">Portugal</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </fieldset>
+
+            
+            <div class="form-group">
+                <label for="comentarios">Comentarios o sugerencias:</label>
+                <textarea id="comentarios" name="comentarios" rows="4" placeholder="Escribe aquí tus comentarios..."></textarea>
+            </div>
+
+            
+            <div class="buttons-container">
+                <input  type="submit" value="Enviar Formulario">
+                <input type="reset" value="Borrar todo">
+            </div>
+
+        </form>
+    </main>
+
+</body>
+</html>
