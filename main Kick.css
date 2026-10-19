@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-image: url(imagenes/Kick\ deal\ fondo.png)
   background-cover: cover;
   
 }
@@ -21,6 +20,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-image: url(imagenes/Kick\ deal\ fondo.png)
 }
 
 .limitador {
