@@ -185,6 +185,21 @@ input[type="reset"]:active {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+
+
+
+
+
+
+.header {
+  background-color: var(--dark-bg);
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 .header-container {
   display: flex;
   justify-content: space-between;
