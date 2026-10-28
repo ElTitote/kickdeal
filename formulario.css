@@ -12,9 +12,6 @@ body {
     background-size: cover;
     background-position: center;
   
-    display: flex;
-    justify-content: center;
-    align-items: center;
     
     background-attachment: fixed;
     height: 225vh;
