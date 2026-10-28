@@ -6,7 +6,7 @@
 }
 
 body {
-  
+    margin: auto;
     background-image: linear-gradient(rgba(187, 169, 5, 0.65), rgba(240, 108, 0, 0.75));
     background-repeat: no-repeat;
     background-size: cover;
@@ -210,7 +210,7 @@ input[type="reset"]:active {
 }
 
 .logo {
-  height: 42px;
+  height: 100px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -220,7 +220,7 @@ input[type="reset"]:active {
 .busqueda {
   display: flex;
   flex: 1;
-  max-width: 480px;
+  max-width: 600px;
   position: relative;
 }
 
