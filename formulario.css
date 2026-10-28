@@ -191,6 +191,7 @@ input[type="reset"]:active {
   background-color: var(--dark-bg);
   padding: 12px 0;
   position: sticky;
+  position: relative;
   top: 0;
   top: 0;
   z-index: 100;
