@@ -187,10 +187,11 @@ input[type="reset"]:active {
 
 
 .header {
-  display:relative;
+  align-self: top;
   background-color: var(--dark-bg);
   padding: 12px 0;
   position: sticky;
+  top: 0;
   top: 0;
   z-index: 100;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
