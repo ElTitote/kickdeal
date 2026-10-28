@@ -271,7 +271,7 @@ input[type="reset"]:active {
 }
 
 /* Botones de navegación del Header */
-.registrarse {
+.Volver {
   display: flex;
   align-items: center;
 }
