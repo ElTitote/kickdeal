@@ -192,6 +192,7 @@ input[type="reset"]:active {
 
 
 .header {
+  display:relative;
   background-color: var(--dark-bg);
   padding: 12px 0;
   position: sticky;
